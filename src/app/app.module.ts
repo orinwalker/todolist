@@ -9,15 +9,7 @@ import { CommonModule } from '@angular/common';
 import { SocialLoginModule, AuthServiceConfig, FacebookLoginProvider } from 'angularx-social-login';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule, MatButtonModule, MatCardModule } from '@angular/material';
-
-
-
-// const config = new AuthServiceConfig([
-//   {
-//     id: FacebookLoginProvider.PROVIDER_ID,
-//     provider: new FacebookLoginProvider('413438242922334')
-//   }
-// ]);
+import { SocialMediaLoginComponent } from './components/social-media-login/social-media-login.component';
 
 const config = new AuthServiceConfig([
   // {
@@ -39,13 +31,13 @@ export function provideConfig() {
   declarations: [
     AppComponent,
     TodosComponent,
-    TodoItemComponent
+    TodoItemComponent,
+    SocialMediaLoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    // SocialLoginModule,
     SocialLoginModule.initialize(config),
     BrowserAnimationsModule,
     MatIconModule,
@@ -53,8 +45,7 @@ export function provideConfig() {
     MatCardModule
   ],
   providers: [
-    // AuthServiceConfig,
-    // useFactory: provideConfig
+
   ],
   bootstrap: [AppComponent]
 })

@@ -303,44 +303,9 @@
   <span>{{ title }}</span>
   <div class="spacer"></div>
 
+  <app-social-media-login></app-social-media-login>
 
-  <!-- Social Media Login Button -->
-  <div class="social-container mat-elevation-z8">
-    <mat-card class="social-card">
-      <mat-card-header>
-        <mat-card-title>
-          <!-- <h2>Welcome <span *ngIf="loggedIn===true">{{user.firstName}} {{user.lastName}}, </span> to {{title}}</h2> -->
-        </mat-card-title>
-        <mat-card-subtitle>
-          <div class="social-subtitle">
-            <button type="button" (click)="signInWithFB()" *ngIf="loggedIn===false" mat-flat-button color="primary">Sign
-              In With Facebook</button>
-            <button type="button" (click)="signOut()" *ngIf="loggedIn===true" mat-flat-button color="primary">Sign Out
-              From Facebook</button>
-          </div>
-        </mat-card-subtitle>
-
-      </mat-card-header>
-    </mat-card>
-    <mat-card class="social-card" *ngIf="loggedIn===true">
-      <mat-card-header>
-        <mat-card-title>
-          <h2>Your Facebook Profile:</h2>
-        </mat-card-title>
-        <mat-card-subtitle>{{user.firstName}} {{user.lastName}}</mat-card-subtitle>
-        <mat-card-subtitle>{{user.email}}</mat-card-subtitle>
-      </mat-card-header>
-      <img style="width:80px" mat-card-image [src]="user.photoUrl" alt="My Facebook Photo">
-      <mat-card-content>
-        <!-- Card contents go here -->
-      </mat-card-content>
-    </mat-card>
-  </div>
-  <!-- Social Media Login Button -->
   <div class="spacer"></div>
-
-
-
 
   <a aria-label="Orin Walker&apos;s twitter" target="_blank" rel="noopener" href="https://twitter.com/orinw"
     title="Twitter">

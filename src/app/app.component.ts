@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService, FacebookLoginProvider, SocialUser } from 'angularx-social-login';
 
 @Component({
   selector: 'app-root',
@@ -8,32 +7,11 @@ import { AuthService, FacebookLoginProvider, SocialUser } from 'angularx-social-
 })
 
 export class AppComponent implements OnInit {
-  title = 'BDA Todos';
-  user: SocialUser;
-  loggedIn: boolean;
+  title = 'BDA Todo List';
 
-  constructor(private authService: AuthService) {
-
-  }
-
-  signInWithFB(): void {
-    this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
-  }
-
-  signOut(): void {
-    this.authService.signOut();
-  }
+  constructor() { }
 
   ngOnInit() {
-    this.authService.authState.subscribe((user) => {
-      this.user = user;
-      this.loggedIn = (user != null);
-      console.log(this.user);
-    });
   }
-
 }
-
-
-
 
