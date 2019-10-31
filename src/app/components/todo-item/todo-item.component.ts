@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Todo } from 'src/app/models/todo';
 
-
 @Component({
   selector: 'app-todo-item',
   templateUrl: './todo-item.component.html',
@@ -9,12 +8,21 @@ import { Todo } from 'src/app/models/todo';
 })
 export class TodoItemComponent implements OnInit {
 
+  // input properties
   @Input() todo: Todo;
 
-  constructor() { }
+  constructor() { 
+  }
 
   ngOnInit() {
+  }
 
+  onToggle(todo) {
+    console.log('toggle called');
+  }
+
+  onDelete(todo) {
+    console.log('delete called');
   }
 
 }
