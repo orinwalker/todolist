@@ -10,6 +10,7 @@ import { SocialLoginModule, AuthServiceConfig, FacebookLoginProvider } from 'ang
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule, MatButtonModule, MatCardModule } from '@angular/material';
 import { SocialMediaLoginComponent } from './components/social-media-login/social-media-login.component';
+import { HttpClientModule} from '@angular/common/http';
 
 const config = new AuthServiceConfig([
   // {
@@ -42,7 +43,8 @@ export function provideConfig() {
     BrowserAnimationsModule,
     MatIconModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule
   ],
   providers: [
 
