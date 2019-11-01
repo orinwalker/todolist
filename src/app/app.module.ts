@@ -11,6 +11,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule, MatButtonModule, MatCardModule } from '@angular/material';
 import { SocialMediaLoginComponent } from './components/social-media-login/social-media-login.component';
 import { HttpClientModule} from '@angular/common/http';
+import { HeaderComponent } from './components/layout/header/header.component';
+import { AddTodoComponent } from './components/add-todo/add-todo.component';
+import { FormsModule } from '@angular/forms';
 
 const config = new AuthServiceConfig([
   // {
@@ -34,6 +37,8 @@ export function provideConfig() {
     TodosComponent,
     TodoItemComponent,
     SocialMediaLoginComponent,
+    HeaderComponent,
+    AddTodoComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +49,8 @@ export function provideConfig() {
     MatIconModule,
     MatButtonModule,
     MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
 
