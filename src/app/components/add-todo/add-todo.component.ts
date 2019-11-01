@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddTodoComponent implements OnInit {
 
-  title:string ;
-  
+  title = '';
+
   constructor() { }
 
   ngOnInit() {
