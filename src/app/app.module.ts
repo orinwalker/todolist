@@ -14,6 +14,7 @@ import { HttpClientModule} from '@angular/common/http';
 import { HeaderComponent } from './components/layout/header/header.component';
 import { AddTodoComponent } from './components/add-todo/add-todo.component';
 import { FormsModule } from '@angular/forms';
+import { AboutComponent } from './components/pages/about/about.component';
 
 const config = new AuthServiceConfig([
   // {
@@ -39,6 +40,7 @@ export function provideConfig() {
     SocialMediaLoginComponent,
     HeaderComponent,
     AddTodoComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
