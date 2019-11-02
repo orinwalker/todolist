@@ -33,6 +33,12 @@ export class TodoService {
     return this.http.delete<Todo>(url, httpOptions);
   }
 
+  // add todo
+  addTodo(todo: Todo): Observable<Todo> {
+    console.log('calling post to add a todo item');
+    return this.http.post<Todo>(this.todosUrl, todo, httpOptions);
+  }
+
   // toggle completed
   // Json Placeholder will not actually persist the data, but we do get back a true/false based on the toggle
   toggleCompleted(todo: Todo): Observable<any> {
